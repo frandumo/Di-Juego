@@ -13,9 +13,7 @@ public class Conecta4 {
 		this.jugador = 1;
 		this.tablero = new Casilla[numFil][numCol];
 		vacia();
-		/*When you want to test the reset before the buttona are implemented
-		 * int e = (int) (Math.random()*8);
-		this.tablero[e][e] = Casilla.JUGADOR1;*/
+		
 	}
 	
 	//Buscar el contenido de una casilla especifica
@@ -23,22 +21,7 @@ public class Conecta4 {
 		return this.tablero[f][c];
 	}
 	
-	//Poner una ficha del jugador que está moviendo
-	public int ponFicha(int c){
-		int f = hayEspacio(c);
-		if(f !=1){
-			if(this.jugador == 1){
-				this.tablero[f][c] = Casilla.JUGADOR1;
-				this.jugador=2;
-			}
-			else{
-				this.tablero[f][c] = Casilla.JUGADOR2;
-				this.jugador=1;
-			}
-		}
-		
-		return f;
-	}
+
 	
 	//Comprobar que hay espacio en la columna para una nueva ficha
 	public int hayEspacio(int c){

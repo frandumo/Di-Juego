@@ -235,6 +235,7 @@ public class Interfaz extends JFrame implements ActionListener{
 		}
 		
 		if(victory==1){
+			cambiarJugador();
 			texto.append("Player "+this.con.jugador+" win.");
 			JOptionPane.showMessageDialog(this, "El Jugador "+this.con.jugador+" ha ganado la partida.\nApreta aceptar para reiniciar.");
 			reiniciar();
